@@ -1,14 +1,15 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
 public class Lecture01Clavier {
 	public static void main(String[] args) {
 		try {
-			BufferedReader flux = new BufferedReader(
-					new InputStreamReader(System.in));
+			// Input
+			Reader in = new InputStreamReader(System.in);
+			// Reader
+			BufferedReader flux = new BufferedReader(in);
 			System.out.print("Entrez votre prenom : ");
 			String prenom = flux.readLine();
+
 			System.out.println("Bonjour " + prenom);
 			flux.close();
 		} catch (IOException ioe) {
