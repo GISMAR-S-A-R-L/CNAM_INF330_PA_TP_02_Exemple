@@ -1,9 +1,11 @@
+package fr.cnam;
+
 import java.io.*;
 
 public class Lecture04FichierUsingInputStream {
 	public static void main(String[] args) throws FileNotFoundException {
 		// Streaming d'une ressource du classpath
-		InputStream stream = Lecture04FichierUsingInputStream.class.getResourceAsStream("data.txt");
+		InputStream stream = Lecture04FichierUsingInputStream.class.getResourceAsStream("../../data.txt");
 		BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
 		try (reader){
 			while (reader.ready()) {
